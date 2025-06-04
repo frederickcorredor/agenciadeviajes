@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agencia de Viajes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: relative;
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    header .content {
+      position: relative;
+      z-index: 1;
+      animation: fadeIn 2s ease-in;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    nav {
+      position: fixed;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    nav .logo {
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 1rem;
+      list-style: none;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #2c3e50;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #3498db;
+    }
+
+    section {
+      padding: 5rem 2rem;
+    }
+
+    .services, .destinations, .testimonios, .beneficios, .equipo {
+      max-width: 1200px;
+      margin: 0 auto;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 0.6s ease-out;
+    }
+
+    .show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .services h2, .destinations h2, .testimonios h2, .beneficios h2, .equipo h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card i {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #3498db;
+    }
+
+    .testimonial, .benefit, .team {
+      text-align: center;
+      background: white;
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">ViajaConNosotros</div>
+    <ul>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#destinos">Destinos</a></li>
+      <li><a href="#beneficios">Beneficios</a></li>
+      <li><a href="#testimonios">Testimonios</a></li>
+      <li><a href="#equipo">Equipo</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <div class="content">
+      <h1>Explora el mundo con nosotros</h1>
+      <p>Tu aventura comienza aquí</p>
+    </div>
+  </header>
+
+  <section id="servicios" class="services">
+    <h2>Nuestros Servicios</h2>
+    <div class="cards">
+      <div class="card">
+        <i class="fas fa-plane"></i>
+        <h3>Vuelos</h3>
+        <p>Encuentra los mejores precios para tus vuelos.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-hotel"></i>
+        <h3>Hoteles</h3>
+        <p>Hospédate en los mejores lugares del mundo.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-suitcase-rolling"></i>
+        <h3>Paquetes</h3>
+        <p>Todo incluido para tu comodidad y tranquilidad.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="destinos" class="destinations">
+    <h2>Destinos Populares</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="https://source.unsplash.com/300x200/?paris" alt="Paris" style="width:100%; border-radius: 0.5rem; margin-bottom: 1rem;">
+        <h3>París</h3>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/300x200/?bali" alt="Bali" style="width:100%; border-radius: 0.5rem; margin-bottom: 1rem;">
+        <h3>Bali</h3>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/300x200/?new-york" alt="New York" style="width:100%; border-radius: 0.5rem; margin-bottom: 1rem;">
+        <h3>New York</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="beneficios" class="beneficios">
+    <h2>¿Por qué elegirnos?</h2>
+    <div class="cards">
+      <div class="benefit">
+        <i class="fas fa-star"></i>
+        <h3>Calidad Garantizada</h3>
+        <p>Trabajamos solo con proveedores de confianza y destinos verificados.</p>
+      </div>
+      <div class="benefit">
+        <i class="fas fa-headset"></i>
+        <h3>Atención Personalizada</h3>
+        <p>Te acompañamos antes, durante y después de tu viaje.</p>
+      </div>
+      <div class="benefit">
+        <i class="fas fa-globe"></i>
+        <h3>Experiencias Únicas</h3>
+        <p>Diseñamos experiencias que se adaptan a ti, no al revés.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonios" class="testimonios">
+    <h2>Testimonios</h2>
+    <div class="cards">
+      <div class="testimonial">
+        <p>"Gracias a ViajaConNosotros tuvimos nuestra luna de miel soñada. Todo fue perfecto desde la planificación hasta el regreso."</p>
+        <strong>- Carla y Luis</strong>
+      </div>
+      <div class="testimonial">
+        <p>"Un equipo muy profesional que se preocupó por cada detalle de nuestro viaje familiar. 100% recomendados."</p>
+        <strong>- Mariana G.</strong>
+      </div>
+    </div>
+  </section>
+
+  <section id="equipo" class="equipo">
+    <h2>Conoce a Nuestro Equipo</h2>
+    <div class="cards">
+      <div class="team">
+        <img src="https://source.unsplash.com/100x100/?person" alt="Equipo" style="border-radius:50%; margin-bottom:1rem;">
+        <h3>Ana Torres</h3>
+        <p>Especialista en destinos exóticos</p>
+      </div>
+      <div class="team">
+        <img src="https://source.unsplash.com/100x100/?business" alt="Equipo" style="border-radius:50%; margin-bottom:1rem;">
+        <h3>Lucas Fernández</h3>
+        <p>Asesor de viajes corporativos</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contacto">
+    <p>&copy; 2025 ViajaConNosotros. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    // Animaciones al hacer scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.services, .destinations, .beneficios, .testimonios, .equipo').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
