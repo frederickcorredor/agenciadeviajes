@@ -23,6 +23,12 @@
     overflow: hidden;
   }
 
+@media(max-width:650px){
+    header{
+background-position-x: -448px;
+}
+}
+
   header::before {
     content: '';
     position: absolute;
