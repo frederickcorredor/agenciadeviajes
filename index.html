@@ -6,184 +6,33 @@
   <title>Agencia de Viajes</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Montserrat', sans-serif;
-      color: #333;
-      overflow-x: hidden;
-    }
-
-    header {
-      position: relative;
-      height: 100vh;
-      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center/cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-    }
-
-    header::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.5);
-    }
-
-    header .content {
-      position: relative;
-      z-index: 1;
-      animation: fadeIn 2s ease-in;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    header p {
-      font-size: 1.2rem;
-    }
-
-    nav {
-      position: fixed;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.9);
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 1000;
-    }
-
-    nav .logo {
-      font-weight: bold;
-      color: #2c3e50;
-    }
-
-    nav ul {
-      display: flex;
-      gap: 1rem;
-      list-style: none;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #2c3e50;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #3498db;
-    }
-
-    section {
-      padding: 5rem 2rem;
-    }
-
-    .services, .destinations, .testimonios, .beneficios, .equipo {
-      max-width: 1200px;
-      margin: 0 auto;
-      opacity: 0;
-      transform: translateY(50px);
-      transition: all 0.6s ease-out;
-    }
-
-    .show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .services h2, .destinations h2, .testimonios h2, .beneficios h2, .equipo h2 {
-      text-align: center;
-      margin-bottom: 2rem;
-      font-size: 2rem;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-
-    .card {
-      background: white;
-      border-radius: 1rem;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-      padding: 2rem;
-      text-align: center;
-      transition: transform 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-10px);
-    }
-
-    .card i {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      color: #3498db;
-    }
-
-    .testimonial, .benefit, .team {
-      text-align: center;
-      background: white;
-      border-radius: 1rem;
-      padding: 2rem;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-
-    footer {
-      background: #2c3e50;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <nav>
-    <div class="logo">ViajaConNosotros</div>
+    <div class="logo"><img src="logo-horizontal.png" alt=""></div>
     <ul>
-      <li><a href="#servicios">Servicios</a></li>
-      <li><a href="#destinos">Destinos</a></li>
-      <li><a href="#beneficios">Beneficios</a></li>
-      <li><a href="#testimonios">Testimonios</a></li>
-      <li><a href="#equipo">Equipo</a></li>
-      <li><a href="#contacto">Contacto</a></li>
+      <li><a href="#servicios">Quienes Somos</a></li>
+      <li><a href="#destinos">Testimonios</a></li>
+      <li><a href="#beneficios">Paquetes Turisticos</a></li>
+      <li><a href="#equipo">Pago a Plazos</a></li>
+      <li><a href="#contacto">Preguntas y Respuestas</a></li>
+      <li><a href="#testimonios">Blog</a></li>
+      <li><a href="#contacto">Contacto </a></li>
+      <li><a href="#" class="cta1">Cotizar</a></li>
     </ul>
   </nav>
 
   <header>
     <div class="content">
-      <h1>Explora el mundo con nosotros</h1>
-      <p>Tu aventura comienza aquí</p>
+      <h1>Expertos en viajes Familiares</h1>
+    </div>
+
+    <div class="logoEsquinero">
+      <img src="logo-esquinero.png" alt="">
     </div>
   </header>
-
+  <!--
   <section id="servicios" class="services">
     <h2>Nuestros Servicios</h2>
     <div class="cards">
@@ -204,25 +53,93 @@
       </div>
     </div>
   </section>
-
+-->
+  <section class="wrapper" id="quienes">
+    <div class="medio">
+      <h2 class="tituloDosFuentes">QUIENES <span>SOMOS</span></h2>
+      <p>
+          Todo comenzó hace más de 15 años, cuando, como madre de dos hijos de 9 y 11 años, me di cuenta de que quería encontrar un equilibrio entre mi vida familiar y mi pasión por los viajes.
+          Anhelaba crear un espacio donde pudiera ayudar a otras familias a disfrutar de momentos especiales juntos, mientras también podía estar presente en la vida de mis hijos. Así nació nuestra agencia de turismo, un sueño que se forjó en la búsqueda de aventuras y en la creencia de que los viajes son una forma poderosa de conectar y crear recuerdos.
+          <br><br>
+          Hoy, miro atrás y agradezco a todas las familias, parejas y clientes que se volvieron amigos; porque, a lo largo de todos estos años, han confiado en nosotros para crear recuerdos inolvidables. 
+          Su apoyo ha sido el motor de este sueño, y cada viaje que hemos compartido ha fortalecido nuestro compromiso de ofrecer experiencias únicas.
+          <br><br>
+          Con la llegada de nuevas tecnologías, nos hemos renovado. Nuestra nueva página web refleja nuestra evolución, pero en el fondo, seguimos siendo el mismo equipo apasionado y confiable, listo para acompañarte en cada aventura. Te invitamos a ser parte de nuestra historia y a seguir creando
+          momentos mágicos juntos.
+      </p>
+    </div>
+    <div class="medio">
+      <img src="foto-mision.png" alt="" class="foto-mision">
+      <h3>SANDRA APELLIDO</h3>
+      <p>GERENTE GENERAL / PARADISE TRAVEL</p>
+    </div>
+  </section>
   <section id="destinos" class="destinations">
-    <h2>Destinos Populares</h2>
+    <h2>TESTIMONIO DE NUESTROS CLIENTES</h2>
+    <a href="#" class="cta">Ver reseñas</a>
     <div class="cards">
       <div class="card">
         <img src="https://source.unsplash.com/300x200/?paris" alt="Paris" style="width:100%; border-radius: 0.5rem; margin-bottom: 1rem;">
-        <h3>París</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor fuga id aliquam quibusdam consectetur eligendi rerum esse quae maxime at numquam quod architecto, nemo, incidunt velit cupiditate? Similique, perferendis ad!</p>
       </div>
       <div class="card">
         <img src="https://source.unsplash.com/300x200/?bali" alt="Bali" style="width:100%; border-radius: 0.5rem; margin-bottom: 1rem;">
-        <h3>Bali</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ex pariatur illo nam distinctio nesciunt animi libero aspernatur aliquam praesentium? Eveniet dolorum perferendis iure ea maxime. Iste, eveniet voluptates. Unde.</p>
       </div>
       <div class="card">
         <img src="https://source.unsplash.com/300x200/?new-york" alt="New York" style="width:100%; border-radius: 0.5rem; margin-bottom: 1rem;">
-        <h3>New York</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi culpa a ad suscipit expedita aliquam animi voluptatem cum molestias rem atque numquam magni voluptatibus itaque quasi, voluptates minus possimus non.</p>
       </div>
     </div>
   </section>
 
+  <section id="testimonios" class="testimonios">
+    <h2>PAQUETES TURISTICOS</h2>
+    <div class="cards">
+      <div class="testimonial">
+        <p>"Gracias a ViajaConNosotros tuvimos nuestra luna de miel soñada. Todo fue perfecto desde la planificación hasta el regreso."</p>
+        <strong>- Carla y Luis</strong>
+      </div>
+      <div class="testimonial">
+        <p>"Un equipo muy profesional que se preocupó por cada detalle de nuestro viaje familiar. 100% recomendados."</p>
+        <strong>- Mariana G.</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrapper">
+    <h2>PAGO A PLAZOS</h2>
+    <div class="medio">
+      <img src="" alt="">
+    </div>
+    <div class="medio">
+      <h4>RESERVA TU VIAJE SOÑADO CON FACILIDAD Y FLEXIBILIDAD</h4>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut pariatur neque, perspiciatis debitis harum nam! Deleniti voluptatibus error similique quidem hic illo quae omnis architecto, qui molestiae, eveniet incidunt.
+      </p>
+      <a href="#" class="cta">Cotizar Viaje</a>
+      <a href="#" class="cta">Saber Más</a>
+    </div>
+  </section>
+
+  <section class="wrapper">
+    <h2>Preguntas y respuestas para tu viaje</h2>
+    <div class="card">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem distinctio possimus in soluta doloremque sequi culpa quas impedit atque, ab tempora, at dolorem? Quam exercitationem odit, illo dignissimos rerum cumque.
+    </div>
+  </section>
+
+  <section class="wrapper" id="bannerazul">
+    <div class="medio">
+
+    </div>
+    <div class="medio">
+      <h4>
+        Cotiza tu Viaje
+      </h4>
+    </div>
+  </section>
+<!--
   <section id="beneficios" class="beneficios">
     <h2>¿Por qué elegirnos?</h2>
     <div class="cards">
@@ -244,19 +161,7 @@
     </div>
   </section>
 
-  <section id="testimonios" class="testimonios">
-    <h2>Testimonios</h2>
-    <div class="cards">
-      <div class="testimonial">
-        <p>"Gracias a ViajaConNosotros tuvimos nuestra luna de miel soñada. Todo fue perfecto desde la planificación hasta el regreso."</p>
-        <strong>- Carla y Luis</strong>
-      </div>
-      <div class="testimonial">
-        <p>"Un equipo muy profesional que se preocupó por cada detalle de nuestro viaje familiar. 100% recomendados."</p>
-        <strong>- Mariana G.</strong>
-      </div>
-    </div>
-  </section>
+
 
   <section id="equipo" class="equipo">
     <h2>Conoce a Nuestro Equipo</h2>
@@ -273,7 +178,7 @@
       </div>
     </div>
   </section>
-
+-->
   <footer id="contacto">
     <p>&copy; 2025 ViajaConNosotros. Todos los derechos reservados.</p>
   </footer>
@@ -288,7 +193,7 @@
       });
     }, { threshold: 0.1 });
 
-    document.querySelectorAll('.services, .destinations, .beneficios, .testimonios, .equipo').forEach(el => observer.observe(el));
+    document.querySelectorAll('.services, .destinations, .beneficios, .testimonios, .equipo, .foto-mision').forEach(el => observer.observe(el));
   </script>
 </body>
 </html>
