@@ -11,6 +11,22 @@
 <body>
   <nav>
     <div class="logo"><img src="logo-horizontal.png" alt=""></div>
+    <ul class="menupc">
+      <li><a href="#servicios">Quienes Somos</a></li>
+      <li><a href="#destinos">Testimonios</a></li>
+      <li><a href="#beneficios">Paquetes Turisticos</a></li>
+      <li><a href="#equipo">Pago a Plazos</a></li>
+      <li><a href="#contacto">Preguntas y Respuestas</a></li>
+      <li><a href="#testimonios">Blog</a></li>
+      <li><a href="#contacto">Contacto </a></li>
+      <li><a href="#" class="cta1">Cotizar</a></li>
+    </ul>
+    <div class="menuhamburguesa" onclick="mostrarMenu()">
+      <i class="fas fa-bars"></i>
+  </nav>
+
+  <div class="menuhamburguesa2" id="menuhamburguesa2">
+    <i class="fas fa-times" onclick="ocultarMenu()"></i>
     <ul>
       <li><a href="#servicios">Quienes Somos</a></li>
       <li><a href="#destinos">Testimonios</a></li>
@@ -21,7 +37,8 @@
       <li><a href="#contacto">Contacto </a></li>
       <li><a href="#" class="cta1">Cotizar</a></li>
     </ul>
-  </nav>
+
+  </div>
 
   <header>
     <div class="content">
@@ -80,15 +97,18 @@
     <div class="cards">
       <div class="card">
         <img src="https://source.unsplash.com/300x200/?paris" alt="Paris" style="width:100%; border-radius: 0.5rem; margin-bottom: 1rem;">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor fuga id aliquam quibusdam consectetur eligendi rerum esse quae maxime at numquam quod architecto, nemo, incidunt velit cupiditate? Similique, perferendis ad!</p>
+        <p>"Gracias a Paradise travel tuvimos nuestra luna de miel soñada. Todo fue perfecto desde la planificación hasta el regreso."</p>
+        <strong>- Carla y Luis</strong>
       </div>
       <div class="card">
         <img src="https://source.unsplash.com/300x200/?bali" alt="Bali" style="width:100%; border-radius: 0.5rem; margin-bottom: 1rem;">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ex pariatur illo nam distinctio nesciunt animi libero aspernatur aliquam praesentium? Eveniet dolorum perferendis iure ea maxime. Iste, eveniet voluptates. Unde.</p>
+        <p>"Un equipo muy profesional que se preocupó por cada detalle de nuestro viaje familiar. 100% recomendados."</p>
+        <strong>- Mariana G.</strong>
       </div>
       <div class="card">
         <img src="https://source.unsplash.com/300x200/?new-york" alt="New York" style="width:100%; border-radius: 0.5rem; margin-bottom: 1rem;">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi culpa a ad suscipit expedita aliquam animi voluptatem cum molestias rem atque numquam magni voluptatibus itaque quasi, voluptates minus possimus non.</p>
+        <p>Recomendamos ampliamente a Paradise travel nuestras mejores vacaciones gracias a ellos</p>
+        <strong>- Teresa M.</strong>
       </div>
     </div>
   </section>
@@ -97,12 +117,12 @@
     <h2>PAQUETES TURISTICOS</h2>
     <div class="cards">
       <div class="testimonial">
-        <p>"Gracias a ViajaConNosotros tuvimos nuestra luna de miel soñada. Todo fue perfecto desde la planificación hasta el regreso."</p>
-        <strong>- Carla y Luis</strong>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, esse voluptatibus et repudiandae earum numquam quas saepe sunt, porro officia quidem. Deserunt neque soluta commodi error, aliquam atque earum libero!</p>
+        
       </div>
       <div class="testimonial">
-        <p>"Un equipo muy profesional que se preocupó por cada detalle de nuestro viaje familiar. 100% recomendados."</p>
-        <strong>- Mariana G.</strong>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores alias vitae consequuntur distinctio nemo, tempora laborum corrupti similique vel aspernatur quod, fugiat numquam a amet in minus, quia praesentium dolorem?</p>
+        
       </div>
     </div>
   </section>
@@ -194,6 +214,18 @@
     }, { threshold: 0.1 });
 
     document.querySelectorAll('.services, .destinations, .beneficios, .testimonios, .equipo, .foto-mision').forEach(el => observer.observe(el));
+  </script>
+
+  <script>
+      function mostrarMenu() {
+    const menu = document.getElementById("menuhamburguesa2");
+    menu.style.display = "flex";
+  }
+
+  function ocultarMenu() {
+    const menu = document.getElementById("menuhamburguesa2");
+    menu.style.display = "none";
+  }
   </script>
 </body>
 </html>
