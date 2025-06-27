@@ -1,275 +1,345 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  body {
-    font-family: 'Montserrat', sans-serif;
-    color: #333;
-    overflow-x: hidden;
-  }
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  overflow-x: hidden;
+}
 
-  header {
-    position: relative;
-    height: 65vh;
-    background: url('imagen-sola.png') no-repeat center center/cover;
-    display: flex;
-    align-items: flex-start;
-    justify-content: left;
-    text-align: center;
-    color: white;
-    padding: 16px;
-    overflow: hidden;
-  }
+header {
+  position: relative;
+  height: 65vh;
+  background: url('imagen-sola.png') no-repeat center center/cover;
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+  text-align: center;
+  color: white;
+  padding: 16px;
+  overflow: hidden;
+}
 
 @media(max-width:650px){
-    header{
+  header{
 background-position-x: -448px;
 }
 }
 
-  header::before {
-    content: '';
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+}
+
+header .content {
+  position: relative;
+  z-index: 1;
+  animation: fadeIn 2s ease-in;
+}
+
+.content{
+  margin-top: 90px;
+}
+
+header h1 {
+  font-size: 3rem;
+  max-width: 490px;
+  text-align: center;
+  padding: 16px;
+  text-shadow: 2px 4px 2px rgb(4 162 255);
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 2px;
+  padding-bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  border-bottom: 4px solid white;
+}
+
+.menuhamburguesa {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menuhamburguesa2 {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: fixed;
+  top: 0px;
+  min-height: 100vh;
+  width: 100%;
+  z-index: 10000;
+  gap: 16px;
+  background: linear-gradient(302deg, #3498db, rgba(103, 161, 247, 0.801));
+  padding: 16px;
+  i{
+    font-size: 2rem;
+    color: #ffffff;
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
   }
 
-  header .content {
-    position: relative;
-    z-index: 1;
-    animation: fadeIn 2s ease-in;
-  }
+  ul li{
+    list-style: none;
+    margin: 8px 0;
+    font-size: 24px;
+    margin-bottom: 24px;
 
-  .content{
-    margin-top: 90px;
+    
+    a{
+      text-decoration: none;
+      color: #fdfeff;
+      font-weight: 800;
+      transition: color 0.7s;
+      border-right: 1px solid #3498db;
+      
+    }
   }
+}
 
-  header h1 {
-    font-size: 3rem;
-    max-width: 490px;
-    text-align: center;
+@media (max-width: 768px) {
+  .menuhamburguesa{
+    display: flex;
+    color: #3498db;
     padding: 16px;
-    text-shadow: 2px 4px 2px rgb(4 162 255);
+    font-size: 21px;
+    
   }
-
-  header p {
-    font-size: 1.2rem;
-  }
-
-  nav {
-    position: fixed;
+  .menupc {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
     width: 100%;
     background-color: #ffffff;
+    padding: 1rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    padding: 2px;
-    padding-bottom: 0px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
-    border-bottom: 4px solid white;
   }
 
-  .logo img {
-    width: 250px;
-  }
 
-  .logoEsquinero{
-    position: absolute;
-    bottom: -15px;
-    right: 0px;
-    animation: fadeIn 2s ease-in;
-  }
+}
 
-  nav ul {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-  }
+.logo img {
+  width: 250px;
+}
 
-  nav ul li a {
-    text-decoration: none;
-    color: rgb(0, 132, 255);
-    font-weight: 800;
-    transition: color 0.7s;
-    border-right: 1px solid rgb(0, 132, 255);
-    padding: 4px 8px 4px 1px;
-  }
+.logoEsquinero{
+  position: absolute;
+  bottom: -15px;
+  right: 0px;
+  animation: fadeIn 2s ease-in;
+}
 
-  nav ul li a:hover {
-    text-shadow: 2px 2px 2px black;
-  }
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
 
-  .cta1{
-    background-color: #085ca5;
-    color: #ffffff;
-    padding: 6px 16px;
-    border-radius: 6px;
-  }
+nav ul li a {
+  text-decoration: none;
+  color: rgb(0, 132, 255);
+  font-weight: 800;
+  transition: color 0.7s;
+  border-right: 1px solid rgb(0, 132, 255);
+  padding: 4px 8px 4px 1px;
+}
 
-  .cta{
-    background-color: #3498db;
-    color: aliceblue;
-    padding: 6px 16px;
-    border-radius: 16px;
-    text-decoration: none;
-    margin-bottom: 16px;
-  }
+nav ul li a:hover {
+  text-shadow: 2px 2px 2px black;
+}
 
-  section {
-    padding:2rem;
-  }
+.cta1{
+  background-color: #085ca5;
+  color: #ffffff;
+  padding: 6px 16px;
+  border-radius: 6px;
+}
 
-  .wrapper{
-    padding:2rem;
+.cta{
+  background-color: #3498db;
+  color: aliceblue;
+  padding: 6px 16px;
+  border-radius: 16px;
+  text-decoration: none;
+  margin-bottom: 16px;
+}
+
+section {
+  padding:2rem;
+}
+
+.wrapper{
+  padding:2rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.medio{
+  width: 45%;
+  min-width: 380px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  text-align: justify;
+
+  padding: 16px;h3{
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-  }
-
-  .medio{
-    width: 45%;
-    min-width: 380px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    text-align: justify;
-
-    padding: 16px;h3{
-      width: 100%;
-      text-align: center;
-    }
-  }
-
-  .foto-mision{
-    width: 100%;
-    max-width: 500px;
-    border-radius: 24px 96px 24px 96px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    transition: .5s ease;
-    border: #1789ec 2px solid;
-    opacity: 0;
-    transform: translateY(50px);
-  }
-
-  .foto-mision:hover{
-    transform: translateY(-6px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-  }
-  .services, .destinations, .testimonios, .beneficios, .equipo {
-    max-width: 1600px;
-    margin: 0 auto;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.6s ease-out;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  #quienes{
-    flex-direction: row-reverse;
-  }
-
-  .testimonios{
-    background: linear-gradient(302deg, #3498db, transparent);
-  }
-
-  #bannerazul{
-    background: linear-gradient(302deg, #3498db, transparent);
-    color: white;
-  }
-
-  #quienes{
-    background: linear-gradient(355deg, #b5d0ff, #ffffff);
-  }
-
-  .show {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-    h2 {
     text-align: center;
-    margin-bottom: 2rem;
+  }
+}
+
+.foto-mision{
+  width: 60%;
+  max-width: 500px;
+  border-radius: 24px 96px 24px 96px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: .5s ease;
+  border: #1789ec 2px solid;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.foto-mision:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+.services, .destinations, .testimonios, .beneficios, .equipo {
+  max-width: 1600px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-out;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#quienes{
+  flex-direction: row-reverse;
+}
+
+.testimonios{
+  background: linear-gradient(302deg, #3498db, transparent);
+}
+
+#bannerazul{
+  background: linear-gradient(302deg, #3498db, transparent);
+  color: white;
+}
+
+#quienes{
+  background: linear-gradient(355deg, #b5d0ff, #ffffff);
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+  h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  width: 100%;
+}
+
+.tituloDosFuentes{
+  font-weight: 500;
+  color: #3498db;
+    span{
+      font-weight: 800;
+      color: #3498db;
+    }
+}
+
+h3{
+  font-weight: 800;
+  color: #3498db;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s;
+  max-width: 950px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #3498db;
+}
+
+.testimonial, .benefit, .team {
+  text-align: center;
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  header h1 {
     font-size: 2rem;
-    width: 100%;
   }
-
-  .tituloDosFuentes{
-    font-weight: 500;
-    color: #3498db;
-      span{
-        font-weight: 800;
-        color: #3498db;
-      }
-  }
-
-  h3{
-    font-weight: 800;
-    color: #3498db;
-  }
-
-  .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-  }
-
-  .card {
-    background: white;
-    border-radius: 1rem;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    padding: 2rem;
-    text-align: center;
-    transition: transform 0.3s;
-    max-width: 950px;
-  }
-
-  .card:hover {
-    transform: translateY(-10px);
-  }
-
-  .card i {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #3498db;
-  }
-
-  .testimonial, .benefit, .team {
-    text-align: center;
-    background: white;
-    border-radius: 1rem;
-    padding: 2rem;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  }
-
-  footer {
-    background: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 2rem 1rem;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  @media (max-width: 768px) {
-    header h1 {
-      font-size: 2rem;
-    }
-  }
+}
