@@ -5,15 +5,19 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'poppins', sans-serif;
   color: #333;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 header {
   position: relative;
   height: 65vh;
-  background: url('nuevofondo.jpeg') no-repeat center center/cover;
+  background: url('nuevofondo.jpeg');
+  background-position: 0px -44px;
+  background-size: cover;
+  background-attachment: fixed;
   display: flex;
   align-items: flex-start;
   justify-content: left;
@@ -54,7 +58,8 @@ header h1 {
   max-width: 490px;
   text-align: center;
   padding: 16px;
-  text-shadow: 2px 4px 2px rgb(4 162 255);
+  text-shadow: 2px 4px 2px #0a457a;
+  transition: transform 0.7s ease;
 }
 
 header p {
@@ -164,31 +169,39 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: rgb(0, 132, 255);
+  color: #0a457a;
   font-weight: 800;
   transition: color 0.7s;
-  border-right: 1px solid rgb(0, 132, 255);
+  border-right: 1px solid #0a457a;
   padding: 4px 8px 4px 1px;
+  transition: 0.5s;
 }
 
 nav ul li a:hover {
-  text-shadow: 2px 2px 2px black;
+  color: #3498db;
+  border-right: 1px solid #3498db;
 }
 
 .cta1{
-  background-color: #085ca5;
+  background: linear-gradient(302deg, #0497fa, #02325c);
   color: #ffffff;
   padding: 6px 16px;
   border-radius: 6px;
 }
 
 .cta{
-  background-color: #3498db;
+  background: linear-gradient(180deg, #3498db, #02325c);
   color: aliceblue;
   padding: 6px 16px;
   border-radius: 16px;
   text-decoration: none;
   margin-bottom: 16px;
+  transition: 0.5s;
+}
+
+.cta:hover{
+  transform: scale(1.05);
+  
 }
 
 section {
@@ -226,15 +239,15 @@ section {
   max-width: 500px;
   border-radius: 24px 96px 24px 96px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  transition: .5s ease;
-  border: #1789ec 2px solid;
+  transition: .7s ease;
+  border: #0a457a 2px solid;
   opacity: 0;
   transform: translateY(50px);
 }
 
 .foto-mision:hover{
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.521);
 }
 .services, .destinations, .testimonios, .beneficios, .equipo {
   max-width: 1600px;
@@ -254,7 +267,19 @@ section {
 }
 
 .testimonios{
-  background: linear-gradient(302deg, #3498db, transparent);
+  background-image: url(palmeras.png);
+  background-size: cover;
+  background-position: center;
+  min-height: 60vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  
+  h2{
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 2px 4px 2px #0a457a;
+  color: white;
+  }
 }
 
 #bannerazul{
@@ -280,16 +305,16 @@ section {
 
 .tituloDosFuentes{
   font-weight: 500;
-  color: #3498db;
+  color: #0a457a;
     span{
       font-weight: 800;
-      color: #3498db;
+      color: #0a457a;
     }
 }
 
 h3{
   font-weight: 800;
-  color: #3498db;
+  color: #0a457a;
 }
 
 .cards {
@@ -324,6 +349,7 @@ h3{
   border-radius: 1rem;
   padding: 2rem;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  max-width: 900px;
 }
 
 footer {
