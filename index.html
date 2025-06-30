@@ -12,11 +12,11 @@
   <nav>
     <div class="logo"><img src="logo-horizontal.png" alt=""></div>
     <ul class="menupc">
-      <li><a href="#servicios">Quienes Somos</a></li>
+      <li><a href="#quienes">Quienes Somos</a></li>
       <li><a href="#destinos">Testimonios</a></li>
-      <li><a href="#beneficios">Paquetes Turisticos</a></li>
-      <li><a href="#equipo">Pago a Plazos</a></li>
-      <li><a href="#contacto">Preguntas y Respuestas</a></li>
+      <li><a href="#testimonios">Paquetes Turisticos</a></li>
+      <li><a href="#pago">Pago a Plazos</a></li>
+      <li><a href="#preguntas">Preguntas y Respuestas</a></li>
       <li><a href="#testimonios">Blog</a></li>
       <li><a href="#contacto">Contacto </a></li>
       <li><a href="#" class="cta1">Cotizar</a></li>
@@ -28,11 +28,11 @@
   <div class="menuhamburguesa2" id="menuhamburguesa2">
     <i class="fas fa-times" onclick="ocultarMenu()"></i>
     <ul>
-      <li><a href="#servicios">Quienes Somos</a></li>
+      <li><a href="#quienes">Quienes Somos</a></li>
       <li><a href="#destinos">Testimonios</a></li>
-      <li><a href="#beneficios">Paquetes Turisticos</a></li>
-      <li><a href="#equipo">Pago a Plazos</a></li>
-      <li><a href="#contacto">Preguntas y Respuestas</a></li>
+      <li><a href="#testimonios">Paquetes Turisticos</a></li>
+      <li><a href="#pago">Pago a Plazos</a></li>
+      <li><a href="#preguntas">Preguntas y Respuestas</a></li>
       <li><a href="#testimonios">Blog</a></li>
       <li><a href="#contacto">Contacto </a></li>
       <li><a href="#" class="cta1">Cotizar</a></li>
@@ -96,17 +96,17 @@
     <a href="#" class="cta">Ver reseñas</a>
     <div class="cards">
       <div class="card">
-        <img src="https://source.unsplash.com/300x200/?paris" alt="Paris" style="width:100%; border-radius: 0.5rem; margin-bottom: 1rem;">
+        <img src="lunamiel.png" alt="Luna de miel" style="width:100%; border-radius: 0.5rem; margin-bottom: 1rem;">
         <p>"Gracias a Paradise travel tuvimos nuestra luna de miel soñada. Todo fue perfecto desde la planificación hasta el regreso."</p>
         <strong>- Carla y Luis</strong>
       </div>
       <div class="card">
-        <img src="https://source.unsplash.com/300x200/?bali" alt="Bali" style="width:100%; border-radius: 0.5rem; margin-bottom: 1rem;">
+        <img src="familiar.png" alt="vaciones familiares" style="width:100%; border-radius: 0.5rem; margin-bottom: 1rem;">
         <p>"Un equipo muy profesional que se preocupó por cada detalle de nuestro viaje familiar. 100% recomendados."</p>
         <strong>- Mariana G.</strong>
       </div>
       <div class="card">
-        <img src="https://source.unsplash.com/300x200/?new-york" alt="New York" style="width:100%; border-radius: 0.5rem; margin-bottom: 1rem;">
+        <img src="cruzero.png" alt="cruzero" style="width:100%; border-radius: 0.5rem; margin-bottom: 1rem;">
         <p>Recomendamos ampliamente a Paradise travel nuestras mejores vacaciones gracias a ellos</p>
         <strong>- Teresa M.</strong>
       </div>
@@ -127,7 +127,7 @@
     </div>
   </section>
 
-  <section class="wrapper">
+  <section class="wrapper" id="pago">
     <h2>PAGO A PLAZOS</h2>
     <div class="medio">
       <img src="" alt="">
@@ -142,7 +142,7 @@
     </div>
   </section>
 
-  <section class="wrapper">
+  <section class="wrapper" id="preguntas">
     <h2>Preguntas y respuestas para tu viaje</h2>
     <div class="card">
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem distinctio possimus in soluta doloremque sequi culpa quas impedit atque, ab tempora, at dolorem? Quam exercitationem odit, illo dignissimos rerum cumque.
@@ -227,5 +227,17 @@
     menu.style.display = "none";
   }
   </script>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const h1 = document.querySelector('header h1');
+    const scrollY = window.scrollY;
+    
+    // Limita el movimiento máximo a 100px
+    const translateY = Math.min(scrollY * 0.9, 100);
+    
+    h1.style.transform = `translateY(${translateY}px)`;
+  });
+</script>
 </body>
 </html>
