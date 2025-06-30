@@ -13,7 +13,7 @@ body {
 header {
   position: relative;
   height: 65vh;
-  background: url('imagen-sola.png') no-repeat center center/cover;
+  background: url('nuevofondo.jpeg') no-repeat center center/cover;
   display: flex;
   align-items: flex-start;
   justify-content: left;
@@ -25,7 +25,7 @@ header {
 
 @media(max-width:650px){
   header{
-background-position-x: -448px;
+background-position-x: -407px;
 }
 }
 
