@@ -14,7 +14,7 @@ body {
 header {
   position: relative;
   height: 65vh;
-  background: url('nuevofondo.jpeg');
+  background: url('nuevofondo.webp');
   background-position: 0px -44px;
   background-size: cover;
   background-attachment: fixed;
