@@ -243,11 +243,12 @@ section {
   border: #0a457a 2px solid;
   opacity: 0;
   transform: translateY(50px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.521);
 }
 
 .foto-mision:hover{
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.521);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.521);
 }
 .services, .destinations, .testimonios, .beneficios, .equipo {
   max-width: 1600px;
@@ -335,21 +336,42 @@ h3{
     .testimonial{
       min-height: 300px;
       min-width: 100px;
-      transition: .5s ease;
+      transition: .3s ease;
       h3{
         display: none;
+      }
+      span{
+        display: none;
+        position: relative;
+        top: 180px;
+        cursor: pointer;
+        transition: .5s;
+      }
+      span:hover{
+        transform: scale(1.05);
+        text-decoration: underline;
       }
     }
   
     .testimonial:hover{
       min-height: 300px;
       min-width: 400px;
+      background-size: cover;
+      transition: .5s ease;
+
       h3{
         display: block;
         color: #ffffff;
         font-size: 1.5rem;
         margin-bottom: 8px;
       }
+      span{
+        display: block;
+        color: #ffffff;
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+      }
+
     }
   }
 }
@@ -369,6 +391,11 @@ h3{
       h3{
         display: none;
       }
+      span{
+        display: none;
+        position: relative;
+        top: 180px;
+      }
     }
   
     .testimonial:hover{
@@ -378,6 +405,12 @@ h3{
         display: block;
         color: #ffffff;
         font-size: 1.5rem;
+        margin-bottom: 8px;
+      }
+      span{
+        display: block;
+        color: #ffffff;
+        font-size: 1.2rem;
         margin-bottom: 8px;
       }
     }
@@ -431,5 +464,68 @@ footer {
 @media (max-width: 768px) {
   header h1 {
     font-size: 2rem;
+  }
+}
+
+
+.modal-oculto {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-contenido {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  text-align: left;
+  max-height: 80%;
+  overflow-y: auto;
+  animation: aparecer 0.3s ease;
+
+    h3{
+      margin:16px 0px;
+    }
+
+    ul li{
+      list-style: none;
+      margin: 8px 0;
+      font-size: 18px;
+      color: #333;
+    }
+}
+
+.cerrar {
+  position: fixed;
+  top: 12vh;
+  right: 10vw;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+@media (min-width: 768px) {
+  .cerrar {
+    right: 30vw;
+  }
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  } to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
