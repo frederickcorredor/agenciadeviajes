@@ -17,7 +17,6 @@
       <li><a href="#testimonios">Paquetes Turisticos</a></li>
       <li><a href="#pago">Pago a Plazos</a></li>
       <li><a href="#preguntas">Preguntas y Respuestas</a></li>
-      <li><a href="#testimonios">Blog</a></li>
       <li><a href="#contacto">Contacto </a></li>
       <li><a href="#" class="cta1">Cotizar</a></li>
     </ul>
@@ -49,28 +48,7 @@
       <img src="logo-esquinero.png" alt="">
     </div>
   </header>
-  <!--
-  <section id="servicios" class="services">
-    <h2>Nuestros Servicios</h2>
-    <div class="cards">
-      <div class="card">
-        <i class="fas fa-plane"></i>
-        <h3>Vuelos</h3>
-        <p>Encuentra los mejores precios para tus vuelos.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-hotel"></i>
-        <h3>Hoteles</h3>
-        <p>Hospédate en los mejores lugares del mundo.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-suitcase-rolling"></i>
-        <h3>Paquetes</h3>
-        <p>Todo incluido para tu comodidad y tranquilidad.</p>
-      </div>
-    </div>
-  </section>
--->
+
   <section class="wrapper" id="quienes">
     <div class="medio">
       <h2 class="tituloDosFuentes">QUIENES <span>SOMOS</span></h2>
@@ -119,7 +97,7 @@
       <div class="testimonial" style="background-image: url(fondocruzero.jpg);background-size: cover; background-position: center;" id="testimonio-crucero">
         <div class="texto-testimonio">
           <h3>Crucero</h3>
-
+            <span class="desplegar" onclick="mostrarCrucero()">Saber más</span>
         </div>
         
         
@@ -127,7 +105,7 @@
       <div class="testimonial"style="background-image: url(cancun.webp);background-size: cover; background-position: center;"id="testimonio-cancun">
         <div class="texto-testimonio">
           <h3>Cancún</h3>
-
+            <span class="desplegar" onclick="mostrarCancun()">Saber más</span>
         </div>
         
         
@@ -136,7 +114,7 @@
       <div class="testimonial"style="background-image: url(mexicocancun.jpg);background-size: cover; background-position: center;" id="testimonio-mexico">
         <div class="texto-testimonio">
           <h3>Mexico</h3>
-
+          <span class="desplegar" onclick="mostrarMexico()">Saber más</span>
         </div>
         
         
@@ -144,22 +122,34 @@
       <div class="testimonial"style="background-image: url(puntacana.jpg);background-size: cover; background-position: center;" id="testimonio-puntacana">
         <div class="texto-testimonio">
           <h3>Punta Cana</h3>
-          
+          <span class="desplegar" onclick="mostrarPuntaCana()">Saber más</span>
         
         
       </div>
     </div>
   </section>
 
+  <!-- Modal general -->
+<div id="modal" class="modal-oculto">
+  <div class="modal-contenido">
+    <span class="cerrar" onclick="cerrarModal()">❌</span>
+    <div id="modal-texto">
+      <!-- Aquí se inserta dinámicamente el contenido -->
+    </div>
+  </div>
+</div>
+
   <section class="wrapper" id="pago">
     <h2>PAGO A PLAZOS</h2>
     <div class="medio">
-      <img src="" alt="">
+      <img src="familiar.png" alt="" class="foto-mision">
     </div>
     <div class="medio">
       <h4>RESERVA TU VIAJE SOÑADO CON FACILIDAD Y FLEXIBILIDAD</h4>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut pariatur neque, perspiciatis debitis harum nam! Deleniti voluptatibus error similique quidem hic illo quae omnis architecto, qui molestiae, eveniet incidunt.
+        En Paradise Travel, creemos que hacer realidad tus sueños de viaje no debería ser una carga financiera. <br><br> Por eso, ofrecemos un plan de pagos flexible que te permite separar tu viaje desde $100.000 por persona y pagarlo en cómodas cuotas, el saldo total se paga 45 dias antes del check-in, todo esto sin intereses y sobre todo garantizando que tu viaje no subirá de precio. <br><br>
+        Contáctanos para más detalles sobre nuestros planes de pago y da el primer paso hacia tu próxima aventura. ¡Viajar nunca ha sido tan fácil!
+
       </p>
       <a href="#" class="cta">Cotizar Viaje</a>
       <a href="#" class="cta">Saber Más</a>
@@ -167,11 +157,17 @@
   </section>
 
   <section class="wrapper" id="preguntas">
-    <h2>Preguntas y respuestas para tu viaje</h2>
-    <div class="card">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem distinctio possimus in soluta doloremque sequi culpa quas impedit atque, ab tempora, at dolorem? Quam exercitationem odit, illo dignissimos rerum cumque.
+    <h2>POR QUÉ ELEGIRNOS:</h2>
+    <div class="cards">
+      <div class="card">💰 <p>Separas con 100.000 por persona.</p></div>
+      <div class="card">🔒 <p>Asegura tu viaje y precios actuales, evitando aumentos futuros en tarifas o disponibilidad.</p></div>
+      <div class="card">✅ <p>Ofrecemos transparencia en los pagos sin cargos ocultos ni intereses.</p></div>
+      <div class="card">🔄 <p>Si necesitas hacer un cambio, lo puedes realizar hasta 45 días antes del viaje.</p></div>
+      <div class="card">📱 <p>Recibe soporte confiable de nuestro equipo en cualquier momento, ya sea por WhatsApp, videollamada o chat y responderemos cualquier pregunta.</p></div>
+      <div class="card">🌍 <p>Contamos con un equipo de expertos en viajes que te guiarán en cada paso del proceso, asegurando que tu experiencia sea inolvidable.</p></div>
     </div>
   </section>
+  
 
   <section class="wrapper" id="bannerazul">
     <div class="medio">
@@ -183,46 +179,7 @@
       </h4>
     </div>
   </section>
-<!--
-  <section id="beneficios" class="beneficios">
-    <h2>¿Por qué elegirnos?</h2>
-    <div class="cards">
-      <div class="benefit">
-        <i class="fas fa-star"></i>
-        <h3>Calidad Garantizada</h3>
-        <p>Trabajamos solo con proveedores de confianza y destinos verificados.</p>
-      </div>
-      <div class="benefit">
-        <i class="fas fa-headset"></i>
-        <h3>Atención Personalizada</h3>
-        <p>Te acompañamos antes, durante y después de tu viaje.</p>
-      </div>
-      <div class="benefit">
-        <i class="fas fa-globe"></i>
-        <h3>Experiencias Únicas</h3>
-        <p>Diseñamos experiencias que se adaptan a ti, no al revés.</p>
-      </div>
-    </div>
-  </section>
 
-
-
-  <section id="equipo" class="equipo">
-    <h2>Conoce a Nuestro Equipo</h2>
-    <div class="cards">
-      <div class="team">
-        <img src="https://source.unsplash.com/100x100/?person" alt="Equipo" style="border-radius:50%; margin-bottom:1rem;">
-        <h3>Ana Torres</h3>
-        <p>Especialista en destinos exóticos</p>
-      </div>
-      <div class="team">
-        <img src="https://source.unsplash.com/100x100/?business" alt="Equipo" style="border-radius:50%; margin-bottom:1rem;">
-        <h3>Lucas Fernández</h3>
-        <p>Asesor de viajes corporativos</p>
-      </div>
-    </div>
-  </section>
--->
   <footer id="contacto">
     <p>&copy; 2025 ViajaConNosotros. Todos los derechos reservados.</p>
   </footer>
@@ -262,6 +219,129 @@
     
     h1.style.transform = `translateY(${translateY}px)`;
   });
+</script>
+
+<script>
+  function mostrarCrucero() {
+    mostrarModal(`
+      <h3>¿PORQUE UN CRUCERO? </h3>
+      <p>Elegir unas vacaciones en crucero es una decisión inteligente y emocionante que ofrece una experiencia única para familias, amigos o parejas.<br><br> En primer lugar, los cruceros son una opción económica, ya que muchos paquetes incluyen alojamiento, comidas y entretenimiento, lo que te permite disfrutar de una variedad de servicios sin preocuparte por gastos adicionales.<br><br> Además, los cruceros te llevan a múltiples destinos en un solo viaje, permitiéndote explorar diferentes lugares y culturas sin la necesidad de hacer maletas constantemente.<br><br> A bordo, encontrarás una amplia gama de actividades que van desde espectáculos en vivo y clases de cocina hasta piscinas y áreas de juegos, asegurando que cada miembro del grupo se divierta.<br><br> La diversidad gastronómica también es un gran atractivo, con múltiples restaurantes que ofrecen desde cocina internacional hasta especialidades locales, lo que te permite disfrutar de una experiencia culinaria variada.<br><br> En resumen, un crucero combina comodidad, aventura y entretenimiento en un solo lugar, convirtiéndolo en la opción perfecta para unas vacaciones memorables con tus seres queridos.</p>
+      <h3>Diversión para Todos:</h3>
+      <p>
+      Los cruceros ofrecen una amplia gama de actividades diseñadas para todas las edades. Desde clubes infantiles y áreas de juegos para los más pequeños, hasta espectáculos en vivo y actividades deportivas para los adolescentes y adultos, cada día a bordo está lleno de opciones emocionantes.<br><br> Las familias pueden disfrutar de piscinas, toboganes acuáticos, y hasta clases de cocina, asegurando que cada miembro encuentre algo que le apasione.
+      </p>
+      <h3>Destinos Inolvidables:</h3>
+      <p>
+        Explora destinos fascinantes mientras navegas en un crucero. Desde las playas del Caribe, las ciudades históricas de Europa, hasta las maravillas naturales de Alaska, cada itinerario ofrece una oportunidad para descubrir nuevos lugares y culturas.<br><br> Además, las excursiones en tierra permiten a las familias disfrutar de actividades locales, desde paseos en bicicleta hasta exploraciones en la naturaleza, todo adaptado a los intereses de cada miembro de la familia.
+      </p>
+      <h3>Comodidad y Confort:</h3>
+      <p>
+        A bordo de nuestros cruceros, disfrutarás de la comodidad de alojarte en un solo lugar mientras exploras diferentes destinos.<br><br> Los camarotes familiares están diseñados para ofrecer espacio y confort, permitiendo que todos se sientan como en casa. Además, los paquetes de comidas todo incluido aseguran que no tengas que preocuparte por la planificación de comidas, lo que te permite concentrarte en disfrutar de tu viaje.
+      </p>
+      <h3>Planificación Personalizada:</h3>
+      <p>
+        En nuestra agencia, entendemos que cada familia es única, por lo que ofrecemos un servicio de planificación personalizado para ayudarte a elegir el crucero perfecto que se adapte a tus necesidades y deseos.<br><br> Desde la selección del itinerario ideal hasta la elección de actividades a bordo, estamos aquí para guiarte en cada paso del camino.
+        </p>
+      <h3>¡Zarpa hacia la Aventura!</h3>
+      <p>
+        No esperes más para vivir la experiencia de un crucero en familia.<br><br> Permítenos ayudarte a crear recuerdos inolvidables mientras navegas por los mares y descubres nuevos horizontes.<br><br> ¡Tu aventura familiar en alta mar comienza aquí!
+        </p>
+        <h3>TODOS NUESTROS PLANES INCLUYEN:</h3>
+        <ul>
+          <li>✅ ALOJAMIENTO EN EL CAMAROTE ESCOGIDO.</li>
+          <li>✅ TRANSPORTE MARÍTIMO.</li>
+          <li>✅ COMIDAS Y SNACKS A BORDO.</li>
+          <li>✅ BEBIDAS.</li>
+          <li>✅ ENTRETENIMIENTO A BORDO.</li>
+          <li>✅ ASISTENCIA MEDICA</li>
+    `);
+  }
+
+  function mostrarCancun() {
+    mostrarModal(`
+      <h3>🌴 Cancún</h3>
+      <p>Cancún es un destino turístico incomparable que combina la belleza natural del Caribe con una amplia gama de actividades y servicios, convirtiéndolo en el lugar perfecto para unas vacaciones familiares.</p>
+
+      <h3>Parques Temáticos:</h3>
+      <p>Cancún es hogar de varios parques temáticos emocionantes que ofrecen diversión para todas las edades. Desde el famoso Xcaret, donde puedes explorar la cultura mexicana, nadar en ríos subterráneos y ver espectáculos en vivo, hasta Xel-Há, un parque natural donde la aventura se mezcla con la belleza escénica, ideal para los amantes del ecoturismo. Además, Wet’n Wild es un parque acuático que garantiza horas de diversión con toboganes y áreas de juegos para los más pequeños. Cada parque ofrece experiencias únicas que crean recuerdos inolvidables para toda la familia.</p>
+
+      <h3>Variedad de Hoteles:</h3>
+      <p>Cancún cuenta con una impresionante selección de hoteles que se adaptan a todas las necesidades y presupuestos. Para las familias, hay resorts todo incluido que ofrecen actividades para niños, clubes infantiles y entretenimiento familiar, asegurando que cada miembro de la familia tenga algo que disfrutar. Algunos de los mejores resorts familiares incluyen el Moon Palace, Grand Fiesta Americana Y el Nickelodeon que ofrecen instalaciones y servicios diseñados específicamente para familias.
+      Por otro lado, Cancún también tiene una gran variedad de hoteles románticos ideales para parejas, perfectos para escapadas románticas. Resorts como el Le Blanc Spa Resort y el Secrets The Vine ofrecen un ambiente exclusivo y relajante, con servicios de lujo que garantizan una experiencia inolvidable para los enamorados.
+      En resumen, Cancún es un destino que ofrece lo mejor de ambos mundos: diversión y aventura para las familias, así como un ambiente romántico para parejas, todo bajo el sol radiante y las aguas cristalinas del Caribe. Como expertos en vacaciones familiares, estamos aquí para ayudarte a planificar el viaje perfecto que se adapte a tus necesidades y deseos. ¡Tu aventura en Cancún te espera!
+      </p>
+      <h3>TODOS NUESTROS PLANES INCLUYEN:</h3>
+      <ul>
+        <li>✅ TIQUETES AEREOS IDA Y REGRESO.</li>
+        <li>✅ TRASLADOS AEROPUERTO, HOTEL AEROPUERTO.</li>
+        <li>✅ ALOJAMIENTO EN HOTEL SELECCIONADO.</li>
+        <li>✅ ALIMENTACION FULL (DESAYUNOS, ALMUERZOS, CENAS, SNACKS Y BAR ABIERTO).</li>
+        <li>✅ ASISTENCIA MEDICA.</li>
+
+    `);
+  }
+
+  function mostrarMexico() {
+    mostrarModal(`
+      <h3>MEXICO Y CANCUN COMBINADO</h3>
+      <p>El viaje combinado a México y Cancún es una experiencia única que te sumerge en la rica cultura mexicana y la belleza natural del Caribe.</p>
+
+      <h3>México, Basílica de Guadalupe y Piramides:</h3>
+      <p>Comenzamos en la Ciudad de México, donde la historia y la cultura cobran vida. Uno de los puntos destacados de esta visita es la Basílica de Guadalupe, un símbolo de la fe y la identidad mexicana. Este importante lugar de peregrinación es conocido por su impresionante arquitectura y por ser el hogar de la imagen de la Virgen de Guadalupe, considerada la patrona de México. La basílica no solo es un centro religioso, sino también un lugar de encuentro para millones de personas que vienen a rendir homenaje y experimentar la espiritualidad que emana de este sitio sagrado. Además, durante el recorrido por las partes históricas de la ciudad, podrás explorar la riqueza cultural de México, desde el Zócalo y el Palacio de Bellas Artes hasta las impresionantes Pirámides de Teotihuacan, donde podrás subir a la famosa Pirámide del Sol y la Pirámide de la Luna, maravillándote con la grandeza de esta antigua civilización y su legado cultural. Teotihuacan es un testimonio del ingenio y la historia de las culturas prehispánicas que habitaron esta región, y su visita es una experiencia que te conectará con las raíces de México.</p>
+
+      <h3>Cancún y sus Playas y Parques Temáticos:</h3>
+      <p>Después de sumergirte en la cultura de la Ciudad de México, es hora de relajarte en las maravillosas playas de Cancún. Con su arena blanca y aguas turquesas, Cancún es el destino perfecto para disfrutar del sol y el mar. Aquí, puedes pasar tus días tomando el sol, nadando o practicando deportes acuáticos. Pero eso no es todo; Cancún también ofrece una variedad de parques temáticos que son ideales para toda la familia. Desde Xcaret, donde podrás conocer la biodiversidad y la cultura mexicana a través de espectáculos y actividades interactivas, hasta Xel-Há, un parque natural donde la diversión acuática se mezcla con la belleza escénica. También puedes disfrutar de Wet’n Wild, un parque acuático lleno de emocionantes toboganes y juegos para todas las edades.</p>
+
+      <p>Este viaje combinado te permite experimentar lo mejor de la cultura mexicana en la Ciudad de México y la diversión y relajación en Cancún, creando recuerdos inolvidables para toda la familia. ¡Prepárate para una aventura llena de historia, belleza y entretenimiento!</p>
+      <h3>TODOS NUESTROS PLANES INCLUYEN:</h3>
+      <ul>
+        <li>✅ TIQUETES AEREOS IDA Y REGRESO.</li>
+        <li>✅ TRASLADOS AEROPUERTO, HOTEL AEROPUERTO, EN MEXICO.</li>
+        <li>✅ ALOJAMIENTO EN HOTEL SELECCIONADO, EN MEXICO.</li>
+        <li>✅ TOUR A BASILICA DE GUADALUPE Y PIRAMIDES DE TEOTIHUACAN.</li>
+        <li>✅ CITY TOUR POR LOS LUGARES MAS EMBLEMATICOS DE MEXICO.</li>
+        <li>✅ TIQUETES MEXICO CANCUN.</li>
+        <li>✅ TRASLADOS AEROPUERTO, HOTEL AEROPUERTO, CANCUN.</li>
+        <li>✅ ALOJAMIENTO EN HOTEL SELECCIONADO, CANCUN.</li>
+        <li>✅ ALIMENTACION FULL (DESAYUNOS, ALMUERZOS, CENAS, SNACKS Y BAR ABIERTO).</li>
+        <li>✅ ASISTENCIA MEDICA.</li>
+    `);
+  }
+
+  function mostrarPuntaCana() {
+    mostrarModal(`
+      <h3>🏖️ Punta Cana</h3>
+      <p>Punta Cana es un destino de ensueño en la República Dominicana, conocido por sus impresionantes playas de arena blanca y aguas turquesas, lo que lo convierte en el lugar ideal para unas vacaciones inolvidables. Este paraíso caribeño ofrece una gran variedad de actividades que satisfacen tanto a familias como a parejas en busca de aventura y relajación.</p>
+
+      <h3>Hoteles para Familias y Parejas:</h3>
+      <p>Punta Cana también cuenta con una impresionante variedad de resorts que se adaptan a todas las necesidades. Los hoteles familiares, como el Hard Rock Hotel & Casino Punta Cana y el Barceló Bávaro Palace y no podemos dejar atrás el fantástico Nickelodeom, que enamora a todos los pqueños de la casa. ofrecen instalaciones diseñadas para entretener a los más pequeños, con clubes infantiles, piscinas y actividades organizadas. Para las parejas, resorts como el Excellence Punta Cana y el Secrets Royal Beach brindan un ambiente romántico y exclusivo, ideal para escapadas y celebraciones especiales.</p>
+
+            <h3>Isla Saona:</h3>
+      <p>Una de las joyas más destacadas de Punta Cana es la hermosa Isla Saona, un destino que no te puedes perder. Esta isla, parte del Parque Nacional del Este, es famosa por sus playas vírgenes, palmeras y paisajes de ensueño. Puedes disfrutar de un relajante paseo en catamarán o lancha rápida hacia la isla, donde te espera un día de exploración y diversión. Una vez allí, podrás nadar en aguas cristalinas, hacer snorkel en arrecifes de coral y disfrutar de un delicioso almuerzo en la playa. La belleza natural de Isla Saona, con sus impresionantes vistas y su ambiente tranquilo, la convierte en el lugar perfecto para crear recuerdos inolvidables.</p>
+
+      <h3>Actividades Diversas:</h3>
+      <p>Además de visitar Isla Saona, Punta Cana ofrece una amplia gama de actividades para todos los gustos. Los parques temáticos como Manatí Park y Dolphin Explorer brindan la oportunidad de interactuar con la fauna local y disfrutar de espectáculos en vivo. <br><br>
+      En resumen, Punta Cana es un destino que ofrece un sinfín de oportunidades para disfrutar en familia, con su combinación de playas paradisíacas y emocionantes actividades. Como expertos en vacaciones familiares, nos dedicamos a ayudarte a planificar un viaje que se adapte a las necesidades de todos, garantizando que cada miembro de la familia tenga la oportunidad de explorar, relajarse y crear recuerdos inolvidables. Desde excursiones a la impresionante Isla Saona hasta la elección del resort ideal, estamos aquí para hacer que tu experiencia en Punta Cana sea verdaderamente excepcional. ¡Tu aventura familiar en este hermoso rincón del Caribe te espera!</p>
+      <h3>TODOS NUESTROS PLANES INCLUYEN:</h3>
+      <ul>
+        <li>✅ TIQUETES AEREOS IDA Y REGRESO.</li>
+        <li>✅ TRASLADOS AEROPUERTO, HOTEL AEROPUERTO.</li>
+        <li>✅ ALOJAMIENTO EN HOTEL SELECCIONADO.</li>
+        <li>✅ ALIMENTACION FULL (DESAYUNOS, ALMUERZOS, CENAS, SNACKS Y BAR ABIERTO).</li>
+        <li>✅ ASISTENCIA MEDICA.</li>
+    `);
+  }
+
+  function mostrarModal(contenidoHTML) {
+    const modal = document.getElementById("modal");
+    const texto = document.getElementById("modal-texto");
+    texto.innerHTML = contenidoHTML;
+    modal.style.display = "flex";
+  }
+
+  function cerrarModal() {
+    document.getElementById("modal").style.display = "none";
+  }
 </script>
 </body>
 </html>
